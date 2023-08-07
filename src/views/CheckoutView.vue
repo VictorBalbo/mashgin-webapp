@@ -103,7 +103,7 @@ const submitOrder = async () => {
 			<div class="form-line">
 				<span class="p-float-label p-input-icon-left mr1">
 					<i class="pi pi-calendar" />
-					<Calendar id="expiration-date" v-model="expirationDate" dateFormat="mm/yy" class="pdl2" />
+					<Calendar id="expiration-date" v-model="expirationDate" dateFormat="mm/yy" view="month" class="pdl2" />
 					<label for="expiration-date">MM/YY</label>
 				</span>
 				<span class="p-float-label p-input-icon-left ml1">
