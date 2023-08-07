@@ -9,16 +9,17 @@ import { Divider } from '@/components'
 	</footer>
 </template>
 
-<style scoped>
+<style scoped lang="scss">
+@import '@/assets/main';
 footer {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	padding: 1rem;
+	padding: $defaultSpacing;
 	color: #6c757d;
 }
 .p-divider.p-divider-horizontal {
 	margin-top: 0;
-	margin-bottom: 1rem;
+	margin-bottom: $defaultSpacing;
 }
 </style>

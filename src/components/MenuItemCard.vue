@@ -29,9 +29,12 @@ const onAddToCartClick = (item: Item) => {
 </template>
 
 <style scoped lang="scss">
+@import '@/assets/main';
 .item-card {
-	width: 20rem;
-	margin: 1rem auto;
+	display: flex;
+	flex-direction: column;
+	width: $cardWidth;
+	margin: $defaultSpacing auto;
 	overflow: hidden;
 	box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.2);
 	transition: box-shadow 0.1s linear;
@@ -40,8 +43,8 @@ const onAddToCartClick = (item: Item) => {
 	}
 }
 .item-image {
-	width: 20rem;
-	height: 15rem;
+	width: $cardWidth;
+	height: $cardHeight;
 	object-fit: cover;
 }
 .item-footer {
@@ -54,8 +57,16 @@ const onAddToCartClick = (item: Item) => {
 }
 </style>
 
-<style>
-.item-card.p-card .p-card-content {
-	padding: 0;
+<style lang="scss">
+.item-card.p-card {
+	.p-card-body {
+		display: flex;
+		flex-direction: column;
+		flex-grow: 1;
+	}
+	.p-card-content {
+		padding: 0;
+		flex-grow: 1;
+	}
 }
 </style>

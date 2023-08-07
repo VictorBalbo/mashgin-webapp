@@ -52,31 +52,32 @@ const finalPrice = computed(() => props.item.price * props.item.quantity)
 </template>
 
 <style scoped lang="scss">
+@import '@/assets/main';
 .item-card {
-	width: 30rem;
+	width: $sidebarWidth;
 	max-width: 100%;
 	display: flex;
 	flex-direction: row;
 }
 .item-image {
-	min-width: 10rem;
-	min-height: 7.5rem;
 	max-width: 10rem;
+	min-width: 10rem;
 	max-height: 7.5rem;
+	min-height: 7.5rem;
 	object-fit: cover;
 	border-radius: 1rem;
 	@media (max-width: 480px) {
-		min-width: 7.5rem;
+		max-height: 5rem;
 		min-height: 5rem;
 		max-width: 7.5rem;
-		max-height: 5rem;
+		min-width: 7.5rem;
 	}
 }
 .item-name-category {
 	display: flex;
 	flex-direction: column;
 	flex-grow: 1;
-	margin-left: 1rem;
+	margin-left: $defaultSpacing;
 	.item-name {
 		font-size: 1.5rem;
 		font-weight: 600;
@@ -98,7 +99,7 @@ const finalPrice = computed(() => props.item.price * props.item.quantity)
 .item-price-quantity {
 	display: flex;
 	flex-direction: column;
-	margin-left: 1rem;
+	margin-left: $defaultSpacing;
 	justify-content: space-between;
 	align-items: flex-end;
 	.item-price {

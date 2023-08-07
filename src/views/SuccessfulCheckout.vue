@@ -91,11 +91,12 @@ const obfuscateCardNumber = (cardNumber?: string) => `************${cardNumber?.
 </style>
 
 <style lang="scss">
+@import '@/assets/main';
 #successful-checkout-sidebar.successful-checkout-sidebar {
 	width: 32rem;
 
 	.p-sidebar-content {
-		padding: 1rem;
+		padding: $defaultSpacing;
 		display: flex;
 		flex-direction: column;
 		align-items: center;

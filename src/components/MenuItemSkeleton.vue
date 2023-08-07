@@ -11,10 +11,11 @@ import { Skeleton } from '@/components'
 	</div>
 </template>
 
-<style scoped>
+<style scoped lang="scss">
+@import '@/assets/main';
 .item-card {
-	width: 20rem;
-	margin: 1rem auto;
+	width: $cardWidth;
+	margin: $defaultSpacing auto;
 }
 .skeleton-item {
 	margin-bottom: 0.5rem;

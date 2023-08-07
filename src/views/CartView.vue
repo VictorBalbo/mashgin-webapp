@@ -64,6 +64,7 @@ const isVisible = computed({
 </template>
 
 <style scoped lang="scss">
+@import '@/assets/main';
 .cart {
 	flex-grow: 1;
 	display: flex;
@@ -83,7 +84,6 @@ const isVisible = computed({
 	flex-direction: row;
 	justify-content: space-between;
 	font-size: 2rem;
-	margin-top: rem;
 	margin-bottom: 2.25rem;
 }
 .pay-buttons {
@@ -97,10 +97,10 @@ const isVisible = computed({
 		justify-content: center;
 	}
 	.mr1 {
-		margin-right: 0.5rem;
+		margin-right: calc($defaultSpacing / 2);
 	}
 	.ml1 {
-		margin-left: 0.5rem;
+		margin-left: calc($defaultSpacing / 2);
 	}
 }
 .cart-placeholder {
@@ -140,8 +140,9 @@ const isVisible = computed({
 </style>
 
 <style lang="scss">
+@import '@/assets/main';
 #cart-sidebar.cart-sidebar {
-	width: 32rem;
+	width: $sidebarWidth + 2 * $defaultSpacing;
 	max-width: 100%;
 
 	.p-sidebar-header {
@@ -149,10 +150,10 @@ const isVisible = computed({
 		flex-direction: row;
 		justify-content: space-between;
 		font-size: 2rem;
-		padding: 1rem;
+		padding: $defaultSpacing;
 	}
 	.p-sidebar-content {
-		padding: 1rem;
+		padding: $defaultSpacing;
 		height: 100%;
 	}
 }

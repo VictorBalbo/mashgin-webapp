@@ -38,11 +38,12 @@ getMenu()
 </template>
 
 <style scoped lang="scss">
-@import url('@/assets/main.scss');
+@import '@/assets/main.scss';
 .menu-list {
-	margin: 1rem;
+	$cardMargin: $defaultSpacing;
+	margin: $cardMargin;
 	display: grid;
-	grid-template-columns: repeat(auto-fill, 22rem);
+	grid-template-columns: repeat(auto-fill, $cardWidth + (2 * $cardMargin));
 	justify-content: center;
 }
 </style>

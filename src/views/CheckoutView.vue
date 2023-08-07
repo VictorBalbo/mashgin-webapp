@@ -136,6 +136,7 @@ const submitOrder = async () => {
 </template>
 
 <style scoped lang="scss">
+@import '@/assets/main';
 header {
 	display: flex;
 }
@@ -144,16 +145,16 @@ header {
 	flex-direction: column;
 	.form-line {
 		margin-top: 0.5rem;
-		margin-bottom: 1rem;
+		margin-bottom: $defaultSpacing;
 		display: flex;
 		.p-float-label {
 			width: 100%;
 		}
 		.mr1 {
-			margin-right: 0.5rem;
+			margin-right: calc($defaultSpacing / 2);
 		}
 		.ml1 {
-			margin-left: 0.5rem;
+			margin-left: calc($defaultSpacing  / 2);
 		}
 	}
 	input {
@@ -167,18 +168,20 @@ header {
 </style>
 
 <style lang="scss">
+@import '@/assets/main';
 #checkout-sidebar.checkout-sidebar {
-	width: 32rem;
+	width: $sidebarWidth + 2 * $defaultSpacing;
+	max-width: 100%;
 
 	.p-sidebar-header {
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
 		font-size: 2rem;
-		padding: 1rem;
+		padding: $defaultSpacing;
 	}
 	.p-sidebar-content {
-		padding: 1rem;
+		padding: $defaultSpacing;
 		display: flex;
 		flex-direction: column;
 	}
