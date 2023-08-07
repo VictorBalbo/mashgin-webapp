@@ -24,14 +24,14 @@ const isVisible = computed({
 	<Sidebar v-model:visible="isVisible" position="right" id="cart-sidebar" class="cart-sidebar">
 		<template #header> Cart </template>
 		<Transition>
-			<section v-if="cartStore.cart.length" class="cart">
+			<section v-if="cartStore.cartCount" class="cart">
 				<section class="cart-items">
 					<div v-for="(item, index) in cartStore.cart" :key="item.id">
 						<MenuItemList
 							:item="item"
 							@update-quantity="(quantity) => (item.quantity = quantity)"
 						/>
-						<Divider v-if="index !== cartStore.cart.length - 1" />
+						<Divider v-if="index !== cartStore.cartCount - 1" />
 					</div>
 				</section>
 				<Divider />
@@ -52,7 +52,7 @@ const isVisible = computed({
 					</div>
 				</section>
 			</section>
-			<section v-else-if="!cartStore.cart.length" class="cart-placeholder">
+			<section v-else class="cart-placeholder">
 				<span class="placeholder-container">
 					<span class="pi pi-shopping-cart placeholder"></span>
 				</span>
