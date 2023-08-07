@@ -96,27 +96,34 @@ const submitOrder = async () => {
 						mask="9999 9999 9999 9999"
 						autocomplete="off"
 					/>
-					<label for="credit-card">Credit Card</label>
+					<label for="credit-card" class="floating-label">Credit Card</label>
 					<i class="pi pi-user" />
 				</span>
 			</div>
 			<div class="form-line">
 				<span class="p-float-label p-input-icon-left mr1">
 					<i class="pi pi-calendar" />
-					<Calendar id="expiration-date" v-model="expirationDate" dateFormat="mm/yy" view="month" class="pdl2" />
-					<label for="expiration-date">MM/YY</label>
+					<Calendar
+						id="expiration-date"
+						v-model="expirationDate"
+						dateFormat="mm/yy"
+						view="month"
+						showButtonBar
+						class="pdl2"
+					/>
+					<label for="expiration-date" class="floating-label">MM/YY</label>
 				</span>
 				<span class="p-float-label p-input-icon-left ml1">
 					<i class="pi pi-key" />
 					<InputMask id="card-cvc" v-model="cardCvc" mask="999" autocomplete="off" />
-					<label for="card-cvc">CVC</label>
+					<label for="card-cvc" class="floating-label">CVC</label>
 				</span>
 			</div>
 			<div class="form-line">
 				<span class="p-float-label p-input-icon-left">
 					<i class="pi pi-user" />
 					<InputText id="card-name" v-model="cardName" autocomplete="off" />
-					<label for="card-name">Name on card</label>
+					<label for="card-name" class="floating-label">Name on card</label>
 				</span>
 			</div>
 			<div class="form-line">
@@ -149,12 +156,17 @@ header {
 		display: flex;
 		.p-float-label {
 			width: 100%;
+			input:focus ~ .floating-label,
+			input.p-filled ~ .floating-label,
+			.p-inputwrapper-filled ~ .floating-label {
+				top: -0.5rem;
+			}
 		}
 		.mr1 {
 			margin-right: calc($defaultSpacing / 2);
 		}
 		.ml1 {
-			margin-left: calc($defaultSpacing  / 2);
+			margin-left: calc($defaultSpacing / 2);
 		}
 	}
 	input {
