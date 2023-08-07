@@ -17,7 +17,6 @@ const isVisible = computed({
 		}
 	},
 })
-// const isVisible = ref(true)
 
 const obfuscateCardNumber = (cardNumber?: string) => `************${cardNumber?.slice(12)}`
 </script>
