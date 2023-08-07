@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import {Button, InputNumber } from '@/components'
+import { Button, InputNumber } from '@/components'
 import { type Item } from '@/models'
 import { computed } from 'vue'
 import { useCartStore } from '@/stores'
@@ -54,6 +54,7 @@ const finalPrice = computed(() => props.item.price * props.item.quantity)
 <style scoped lang="scss">
 .item-card {
 	width: 30rem;
+	max-width: 100%;
 	display: flex;
 	flex-direction: row;
 }
@@ -64,6 +65,12 @@ const finalPrice = computed(() => props.item.price * props.item.quantity)
 	max-height: 7.5rem;
 	object-fit: cover;
 	border-radius: 1rem;
+	@media (max-width: 480px) {
+		min-width: 7.5rem;
+		min-height: 5rem;
+		max-width: 7.5rem;
+		max-height: 5rem;
+	}
 }
 .item-name-category {
 	display: flex;
@@ -79,6 +86,14 @@ const finalPrice = computed(() => props.item.price * props.item.quantity)
 		font-weight: 300;
 		flex-grow: 1;
 	}
+	@media (max-width: 480px) {
+		.item-name {
+			font-size: 1.25rem;
+		}
+		.item-category {
+			font-size: 0.9rem;
+		}
+	}
 }
 .item-price-quantity {
 	display: flex;
@@ -91,6 +106,11 @@ const finalPrice = computed(() => props.item.price * props.item.quantity)
 	}
 	.delete-item {
 		padding: 5px 0;
+	}
+	@media (max-width: 480px) {
+		.item-price {
+			font-size: 1.25rem;
+		}
 	}
 }
 </style>

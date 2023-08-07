@@ -142,6 +142,7 @@ const isVisible = computed({
 <style lang="scss">
 #cart-sidebar.cart-sidebar {
 	width: 32rem;
+	max-width: 100%;
 
 	.p-sidebar-header {
 		display: flex;

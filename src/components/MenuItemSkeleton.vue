@@ -14,6 +14,7 @@ import { Skeleton } from '@/components'
 <style scoped>
 .item-card {
 	width: 20rem;
+	margin: 1rem auto;
 }
 .skeleton-item {
 	margin-bottom: 0.5rem;
