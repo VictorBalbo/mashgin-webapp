@@ -1,5 +1,1 @@
-import {config} from "dotenv"
-
-config()
-
-export const serverUri = process.env.SERVER_URI ?? 'http://localhost:3000'
+export const serverUri = import.meta.env.VITE_SERVER_URI ?? 'http://localhost:3000'
