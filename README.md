@@ -1,46 +1,51 @@
-# mashgin-webapp
+# Simple Checkout System
+This project is part of Mashgin Software Engineer assignment.
 
-This template should help get you started developing with Vue 3 in Vite.
+You can access the deployed projecy on https://mashgin.victorbalbo.com/ hosted by Vercel.
+
+
+## Technologies used
+- `vue 3` as main framework
+- `vue-router` for routing
+- `Pinia` for state management between components
+- `TypeScript` for variables typing
+- `PrimeVue` for basic components
+- `sass-loader` as extension language for CSS 
 
 ## Recommended IDE Setup
 
 [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
 
-## Type Support for `.vue` Imports in TS
+## Dependency
+This project depends on a backend api running. The project for the backend api can be found [here](https://github.com/VictorBalbo/mashgin-api). Also the published API can be found at https://mashgin-api.victorbalbo.com/.
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) to make the TypeScript language service aware of `.vue` types.
-
-If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has also implemented a [Take Over Mode](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1361669) that is more performant. You can enable it by the following steps:
-
-1. Disable the built-in TypeScript Extension
-    1) Run `Extensions: Show Built-in Extensions` from VSCode's command palette
-    2) Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
-2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+If needed to change the url for the api, you can change the default value for the variable `serverUri` on the file `src/constants.ts`; Or create a `.env` file defining the variable value like the exempla bellow:
+```sh
+VITE_SERVER_URI=http://localhost:3000
+```
 
 ## Project Setup
+This project can run in two ways, using `Docker` or using `Node` commands
 
+### Docker
+#### Build Image
+```sh
+docker build . -t mashgin-webapp
+```
+#### Run Image as Container
+```sh
+docker run -p 8080:80 mashgin-webapp
+```
+
+### Node CLI
+#### Install Project Dependencies
 ```sh
 npm install
 ```
-
 ### Compile and Hot-Reload for Development
-
 ```sh
 npm run dev
 ```
 
-### Type-Check, Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
+## What this WebApp do
+This WebApp fetches a menu from the [Mashgin API project](https://github.com/VictorBalbo/mashgin-api), display the menu itens as cards, allows user to add itens to the cart and to checkout the cart, simulating a e-comerce flow. The cart items are stored locally.
