@@ -36,6 +36,7 @@ docker build . -t mashgin-webapp
 ```sh
 docker run -p 8080:80 mashgin-webapp
 ```
+This will run the webapp locally though `Docker` using port 8080. The app will run on http://localhost:8080/
 
 ### Node CLI
 #### Install Project Dependencies
@@ -46,6 +47,8 @@ npm install
 ```sh
 npm run dev
 ```
+This will run the webapp locally using port 8080 (if the port is already been used, the next available port will be used). To make sure wich port will be used, check the output of the `npm run dev` command.
+
 
 ## What this WebApp do
 This WebApp fetches a menu from the [Mashgin API project](https://github.com/VictorBalbo/mashgin-api), display the menu itens as cards, allows user to add itens to the cart and to checkout the cart, simulating a e-comerce flow. The cart items are stored locally.
