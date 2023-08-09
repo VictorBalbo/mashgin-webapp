@@ -19,7 +19,6 @@ const items = ref([
 		icon: 'pi pi-shopping-cart',
 		command: () => sidebarStore.showSidebar(SidebarEnum.Cart),
 	},
-	{ label: 'My Orders', icon: 'pi pi-shopping-bag' },
 ])
 </script>
 
