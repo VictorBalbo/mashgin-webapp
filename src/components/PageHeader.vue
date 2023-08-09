@@ -36,7 +36,7 @@ const items = ref([
 					<span v-badge="cartStore.cartCount" class="pi pi-shopping-cart p-overlay-badge cart" />
 				</span>
 			</Transition>
-			<Avatar icon="pi pi-user" size="large" shape="circle" @click="toggleMenu" />
+			<Avatar class="avatar" icon="pi pi-user" size="large" shape="circle" @click="toggleMenu" />
 			<Menu ref="menu" id="header-menu" :model="items" :popup="true" />
 		</div>
 	</header>
@@ -66,6 +66,9 @@ header {
 	}
 	.cart {
 		font-size: 1.5rem;
+	}
+	.avatar {
+		cursor: pointer;
 	}
 }
 
