@@ -1,7 +1,7 @@
 import type { Item, Payment } from './'
 
 export interface Order {
-	Items: Item[]
-	Total: number
-	Payment: Payment
+	items: Item[]
+	total: number
+	payment: Payment
 }

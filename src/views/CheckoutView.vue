@@ -34,13 +34,13 @@ const isFormValid = computed(
 
 const submitOrder = async () => {
 	const order: Order = {
-		Items: cartStore.cart,
-		Total: cartStore.cartPrice,
-		Payment: {
-			cardNumber: cardNumber.value.replace(/\s/g, ''),
-			expirationDate: expirationDate.value,
+		items: cartStore.cart,
+		total: cartStore.cartPrice,
+		payment: {
+			card_number: cardNumber.value.replace(/\s/g, ''),
+			expiration_date: expirationDate.value,
 			cvc: cardCvc.value,
-			cardName: cardName.value,
+			card_name: cardName.value,
 		},
 	}
 	const response = await fetch(`${serverUri}/order`, {

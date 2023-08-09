@@ -37,13 +37,13 @@ const obfuscateCardNumber = (cardNumber?: string) => `************${cardNumber?.
 				<span class="text">Billed to</span>
 				<span class="fill-space"></span>
 				<span class="text">{{
-					obfuscateCardNumber(orderStore.lastOrder?.Payment.cardNumber)
+					obfuscateCardNumber(orderStore.lastOrder?.payment.card_number)
 				}}</span>
 			</div>
 			<div class="text-line">
 				<span class="text">Total</span>
 				<span class="fill-space"></span>
-				<span class="text">{{ orderStore.lastOrder?.Total.toFixed(2) }}</span>
+				<span class="text">{{ orderStore.lastOrder?.total.toFixed(2) }}</span>
 			</div>
 		</section>
 	</Sidebar>

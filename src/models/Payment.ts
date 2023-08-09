@@ -1,6 +1,6 @@
 export interface Payment {
-  cardNumber: string
+  card_number: string
   cvc: string
-  expirationDate:string
-  cardName: string
+  expiration_date:string
+  card_name: string
 }
