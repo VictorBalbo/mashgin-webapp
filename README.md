@@ -28,6 +28,7 @@ VITE_SERVER_URI=http://localhost:3000
 This project can run in two ways, using `Docker` or using `Node` commands
 
 ### Docker
+To run this project using Docker you will need to have a `Docker Engine` and `Docker CLI` installed and running.
 #### Build Image
 ```sh
 docker build . -t mashgin-webapp
@@ -39,6 +40,7 @@ docker run -p 8080:80 mashgin-webapp
 This will run the webapp locally though `Docker` using port 8080. The app will run on http://localhost:8080/
 
 ### Node CLI
+To run this project using Node you will need to have a `Node 18+` installed. You can check your node version using the command `node -v`.
 #### Install Project Dependencies
 ```sh
 npm install
